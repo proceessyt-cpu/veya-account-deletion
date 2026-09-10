@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VEYA – Gizlilik Politikası / Privacy Policy</title>
+<style>
+  :root {
+    --warm-ivory: #F7F4F1;
+    --pure-surface: #FFFFFF;
+    --surface-variant: #F0EBE7;
+    --ink-primary: #1A1718;
+    --ink-muted: #7A7074;
+    --warm-border: #E8E2DE;
+    --wine-red: #9A2E4F;
+    --plum-secondary: #6F3A57;
+    --warning-amber: #E0A63A;
+    --danger-wine: #B3273F;
+    --success-green: #2E7D59;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--warm-ivory);
+    color: var(--ink-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+
+  header.hero {
+    text-align: center;
+    padding: 8px 0 20px;
+  }
+
+  header.hero .brand {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--wine-red);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    color: var(--ink-primary);
+  }
+
+  .developer-line {
+    color: var(--ink-muted);
+    font-size: 15px;
+    margin: 0 0 4px;
+  }
+
+  .updated-line {
+    color: var(--ink-muted);
+    font-size: 13px;
+    margin: 0;
+  }
+
+  /* Dil secici */
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 18px 0 4px;
+  }
+
+  .lang-btn {
+    border: 1px solid var(--warm-border);
+    background: var(--pure-surface);
+    color: var(--ink-muted);
+    border-radius: 999px;
+    padding: 7px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .lang-btn.active {
+    background: var(--wine-red);
+    border-color: var(--wine-red);
+    color: #fff;
+  }
+
+  .card {
+    background: var(--pure-surface);
+    border: 1px solid var(--warm-border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+    margin: 0 0 12px;
+    color: var(--wine-red);
+  }
+
+  .card h3 {
+    font-size: 15px;
+    margin: 18px 0 8px;
+    color: var(--plum-secondary);
+  }
+
+  .card h3:first-of-type {
+    margin-top: 4px;
+  }
+
+  .card p, .card li {
+    font-size: 15px;
+    color: var(--ink-primary);
+  }
+
+  .card ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .card li {
+    margin-bottom: 8px;
+  }
+
+  .card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .muted {
+    color: var(--ink-muted);
+    font-size: 14px;
+  }
+
+  .intro-card {
+    background: var(--surface-variant);
+    border: 1px solid var(--warm-border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--ink-primary);
+  }
+
+  .badge-immediate {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: rgba(46, 125, 89, 0.12);
+    color: #2E7D59;
+    border-radius: 999px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+
+  .badge-retained {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: rgba(224, 166, 58, 0.16);
+    color: #8A5F17;
+    border-radius: 999px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--wine-red);
+    color: #fff !important;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.15s ease;
+  }
+
+  .cta-btn:hover {
+    background: var(--danger-wine);
+  }
+
+  .in-app-path {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface-variant);
+    border: 1px solid var(--warm-border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--plum-secondary);
+    margin-top: 4px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  footer p {
+    color: var(--ink-muted);
+    font-size: 13px;
+    margin: 4px 0;
+  }
+
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <span class="brand">VEYA</span>
+      <h1 id="page-title">Gizlilik Politikası</h1>
+      <p class="developer-line" id="developer-line">Geliştirici: Process Studio</p>
+      <p class="updated-line" id="updated-line">Son güncelleme: 10 Eylül 2026</p>
+    </header>
+
+    <div class="lang-toggle" role="group" aria-label="Dil seçimi / Language">
+      <button type="button" class="lang-btn active" id="btn-tr" onclick="setLang('tr')">TR</button>
+      <button type="button" class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+
+    <!-- ================= TÜRKÇE ================= -->
+    <div id="content-tr">
+
+      <div class="intro-card">
+        VEYA, 18 yaş ve üzeri yetişkinler için tasarlanmış bir ilişki/eşleşme uygulamasıdır.
+        18 yaşından küçük kişilere yönelik değildir ve bu kişilerden bilerek hesap ya da
+        kişisel veri kabul etmez. VEYA'yı geliştiren şirket <strong>Process Studio</strong>'dur.
+      </div>
+
+      <section class="card">
+        <h2>1. Topladığımız veriler</h2>
+
+        <h3>Hesap ve kimlik doğrulama</h3>
+        <ul>
+          <li>Ad, e-posta adresi, telefon numarası</li>
+          <li>Kullanıcı kimliği (hesap ID'si)</li>
+          <li>Giriş/kimlik doğrulama verileri (ör. Google ile giriş bağlantısı)</li>
+          <li>Şifreniz düz metin olarak saklanmaz; güvenli bir tek yönlü hash algoritmasıyla saklanır</li>
+        </ul>
+
+        <h3>Profil bilgileri</h3>
+        <ul>
+          <li>Yaş, boy, kilo, vücut tipi, medeni durum</li>
+          <li>Şehir, meslek, (verirseniz) gelir bilgisi</li>
+          <li>Hakkında metni, hobiler/ilgi alanları</li>
+          <li>Profil fotoğrafları</li>
+        </ul>
+
+        <h3>Konum</h3>
+        <ul>
+          <li>İzin verdiğinizde cihazınızdan hassas (precise) konum bilgisi alınabilir</li>
+          <li>Tam koordinatlarınız diğer kullanıcılara HİÇBİR ZAMAN gösterilmez</li>
+          <li>Konum yalnızca keşfet/eşleşme sıralaması ve mesafe hesaplaması için kullanılır</li>
+          <li>Diğer kullanıcılara yalnızca yaklaşık bir mesafe (ör. "6 km uzakta") gösterilir</li>
+        </ul>
+
+        <h3>Uygulama içi etkileşimler</h3>
+        <ul>
+          <li>Beğeni/geç (swipe) hareketleri ve puanlamalar</li>
+          <li>Eşleşmeler, engellemeler, eşleşme kaldırma (unmatch)</li>
+          <li>Rapor/şikâyet kayıtları</li>
+          <li>Genel kullanım hareketleri (aktiflik, uygulama içi olaylar)</li>
+        </ul>
+
+        <h3>Mesajlaşma</h3>
+        <ul>
+          <li>Eşleştiğiniz kullanıcılarla aranızdaki mesajlar</li>
+          <li>Yapay zekâ karakterleriyle yaptığınız sohbetler</li>
+        </ul>
+
+        <h3>Yapay zekâ (AI) sohbetleri</h3>
+        <ul>
+          <li>Alev, Burak, Lara, Mert, Vera gibi karakterler açıkça <strong>yapay zekâ</strong> olarak sunulur;
+            bunların gerçek bir kişi olmadığı uygulama içinde net şekilde belirtilir</li>
+          <li>Bu sohbetlerin içeriği, hizmeti sağlayabilmek için Google Gemini API gibi yapay
+            zekâ hizmet sağlayıcılarına işlenmek üzere gönderilebilir</li>
+          <li>
+            Yapay zekâ karakterleriyle yaptığınız sohbetlerin içeriği, hizmet kalitesini
+            sağlamak, kötüye kullanımı önlemek ve güvenliği sürdürmek amacıyla yetkilendirilmiş
+            uygulama yöneticileri (founder/admin) tarafından görüntülenebilir. Bu erişimler
+            kayıt altına alınır.
+          </li>
+          <li>Bu yönetici erişimlerinin her biri kim tarafından, hangi konuşma için ve ne zaman
+            yapıldığı bilgisiyle audit (denetim) kaydına yazılır; bu kayıt mesajın kendi
+            metnini İÇERMEZ, yalnızca erişim olayını kaydeder</li>
+        </ul>
+
+        <h3>Doğrulama</h3>
+        <ul>
+          <li>Kimlik/hesap doğrulaması (verification badge) için isteğe bağlı olarak bir
+            selfie/fotoğraf gönderebilirsiniz</li>
+          <li>Bu görsele yalnızca doğrulama sürecini yürüten yetkili moderatör/yönetici erişebilir,
+            erişimler denetim kaydına yazılır</li>
+        </ul>
+
+        <h3>Satın alma / abonelik</h3>
+        <ul>
+          <li>Premium ve Premium+ abonelik durumunuz</li>
+          <li>Google Play üzerinden yapılan satın alma/abonelik işlemlerine ait bilgiler
+            (satın alma zamanı, ürün, durum)</li>
+          <li>Tam kredi kartı/ödeme aracı bilgileriniz VEYA sunucularında SAKLANMAZ — ödeme
+            işlemi doğrudan Google Play tarafından yürütülür</li>
+        </ul>
+
+        <h3>Teknik veriler</h3>
+        <ul>
+          <li>Cihaz/uygulama örneği (instance) tanımlayıcıları</li>
+          <li>Bildirimler etkinleştirildiğinde, cihazınıza bildirim gönderebilmek için bir
+            push bildirim token'ı saklanabilir</li>
+          <li>Güvenlik ve işlem kayıtları (log)</li>
+          <li>IP adresiniz; güvenlik, kötüye kullanımı önleme ve istek sıklığı sınırlama
+            (rate-limit) amaçlarıyla işlenebilir</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>2. Verilerinizi neden kullanıyoruz</h2>
+        <ul>
+          <li>Hesap oluşturma, giriş ve kimlik doğrulama</li>
+          <li>Profilinizi oluşturma ve keşfet akışını çalıştırma</li>
+          <li>Konumunuza göre eşleştirme ve mesafe hesaplama</li>
+          <li>Beğeni, eşleşme ve sohbet özelliklerini sağlama</li>
+          <li>Yapay zekâ sohbet özelliğini sağlama</li>
+          <li>Premium/Premium+ yetkilendirmesi</li>
+          <li>Güvenlik, dolandırıcılık ve kötüye kullanımın önlenmesi</li>
+          <li>Moderasyon ve şikâyet/rapor yönetimi</li>
+          <li>Kimlik/hesap doğrulama</li>
+          <li>Teknik altyapının işletilmesi ve sorun giderme</li>
+          <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+          <li>Talep etmeniz hâlinde hesabınızın/verilerinizin silinmesi</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3. Üçüncü taraf hizmet sağlayıcılar</h2>
+        <p>Verileriniz aşağıdaki hizmet sağlayıcılara (processor), yalnızca belirtilen amaçla
+          işlenmek üzere aktarılabilir:</p>
+        <ul>
+          <li><strong>Google Gemini API</strong> — yapay zekâ sohbet içeriğinin işlenmesi</li>
+          <li><strong>Google Play</strong> — abonelik/satın alma işlemleri</li>
+          <li>Uygulamanın kendi sunucu altyapısında barındırılan güvenli depolama —
+            fotoğraf ve dosyaların saklanması</li>
+        </ul>
+        <p class="muted" style="margin-top:12px;">
+          Bildirim, SMS ve e-posta hizmetleri etkinleştirildiğinde, bu işlevleri sağlamak için
+          gerekli veriler ilgili hizmet sağlayıcılara aktarılabilir.
+        </p>
+        <p class="muted" style="margin-top:12px;">
+          VEYA, kullanıcı verilerinizi reklamverenlere veya üçüncü taraflara SATMAZ. Yukarıdaki
+          aktarımlar yalnızca hizmeti sağlamak amacıyla, hizmet sağlayıcı (processor) sıfatıyla
+          yapılır.
+        </p>
+      </section>
+
+      <section class="card">
+        <span class="badge-immediate">Hemen silinir / anonimleştirilir</span>
+        <h2>4. Hesabınızı sildiğinizde</h2>
+        <ul>
+          <li>Profil bilgileriniz (ad, doğum tarihi, cinsiyet, tercihler, boy/kilo/meslek gibi profil alanları)</li>
+          <li>Profil fotoğraflarınız ve doğrulama selfie'niz</li>
+          <li>Eşleşme/arama tercihleriniz ve filtre ayarlarınız</li>
+          <li>Konum bilginiz</li>
+          <li>Bildirim tercihleriniz ve cihaz bildirim kaydınız</li>
+          <li>Yapay zekâ karakterleriyle olan tüm konuşmalarınız ve mesajlarınız</li>
+          <li>Hesabınıza doğrudan bağlı diğer kişisel verileriniz</li>
+        </ul>
+        <p class="muted" style="margin-top:14px;">
+          Bu veriler geri döndürülemez şekilde silinir veya kişiyi tanımlamayacak şekilde
+          anonimleştirilir.
+        </p>
+      </section>
+
+      <section class="card">
+        <span class="badge-retained">Kısmen tutulur</span>
+        <h2>5. Mesajlar (kullanıcılar arası)</h2>
+        <p>
+          Eşleştiğiniz kişilerle yaptığınız yazışmalarda, karşı tarafın konuşma geçmişinin
+          bütünlüğünü korumak için mesaj içeriği tamamen silinmeyebilir; bunun yerine hesabınız
+          silindiğinde gönderen kimliğiniz mesajlardan kaldırılır ve karşı tarafa "silinmiş
+          kullanıcı" olarak görünür. Tüm mesajların içeriğinin silindiği iddia edilmez.
+        </p>
+      </section>
+
+      <section class="card">
+        <span class="badge-retained">Kısmen tutulur</span>
+        <h2>6. Abonelik, güvenlik ve kötüye kullanım önleme kayıtları</h2>
+        <p>
+          Abonelik/ödeme geçmişi, güvenlik olayları, moderasyon (rapor/engelleme) kayıtları ve
+          kötüye kullanımı önlemeye yönelik kayıtlar; yasal yükümlülükler (ör. muhasebe
+          mevzuatı) ve platform güvenliği gerekçesiyle, kimliğinizden ayrıştırılmış
+          (pseudonymized) biçimde sınırlı bir süre daha tutulabilir. Bu kayıtlar sizi doğrudan
+          tanımlayacak şekilde kullanılmaz.
+        </p>
+      </section>
+
+      <section class="card" id="delete-account">
+        <h2>7. Hesabınızı silme</h2>
+        <p>Hesabınızı ve ilişkili kişisel verilerinizi istediğiniz zaman silebilirsiniz:</p>
+        <div class="in-app-path">Profil &gt; Hesabımı Sil</div>
+        <p class="muted" style="margin: 14px 0;">
+          Uygulamaya erişiminiz yoksa, aşağıdaki web sayfasından da silme talebi
+          başlatabilirsiniz:
+        </p>
+        <a class="cta-btn" href="https://proceessyt-cpu.github.io/veya-account-deletion/">Hesabımı sil</a>
+      </section>
+
+      <section class="card">
+        <h2>8. Haklarınız</h2>
+        <p>
+          Hesabınızı ve ilişkili verilerinizi silme hakkınız yukarıda açıklanmıştır. Ayrıca,
+          bulunduğunuz yerdeki uygulanabilir veri koruma mevzuatı kapsamında verilerinize
+          erişim, verilerinizi düzeltme veya silinmesini talep etme gibi haklara sahip
+          olabilirsiniz. Bu tür talepleriniz için uygulama içindeki "Yardım ve Destek" bölümünü
+          kullanabilirsiniz.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>9. Yaş sınırı</h2>
+        <p>
+          VEYA yalnızca 18 yaş ve üzeri kullanıcılar içindir. 18 yaşından küçük kişilerden
+          bilerek hesap veya kişisel veri kabul etmeyi amaçlamıyoruz. 18 yaşından küçük bir
+          kişinin bize veri sağladığını fark edersek, ilgili hesabı ve verileri kaldırmak için
+          makul adımları atarız.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>10. Güvenlik</h2>
+        <p>
+          Verileriniz aktarım sırasında HTTPS/TLS ile şifrelenir. Erişim kontrolleri, kimlik
+          doğrulama mekanizmaları ve hassas yönetici işlemleri için ayrı, denetim kayıtlı
+          erişim kısıtlamaları uygularız. Ancak hiçbir sistem %100 güvenli olduğunu garanti
+          edemez; makul teknik ve idari önlemleri almaya devam ederiz.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>11. İletişim</h2>
+        <p>
+          Bu Gizlilik Politikası veya verileriniz hakkında sorularınız için uygulama içindeki
+          "Profil &gt; Yardım ve Destek" bölümünü kullanabilirsiniz.
+        </p>
+      </section>
+
+    </div>
+
+    <!-- ================= ENGLISH ================= -->
+    <div id="content-en" hidden>
+
+      <div class="intro-card">
+        VEYA is a relationship/matching app designed for adults aged 18 and over. It is not
+        directed at anyone under 18, and we do not knowingly accept accounts or personal data
+        from anyone under that age. VEYA is developed by <strong>Process Studio</strong>.
+      </div>
+
+      <section class="card">
+        <h2>1. Data we collect</h2>
+
+        <h3>Account &amp; authentication</h3>
+        <ul>
+          <li>Name, email address, phone number</li>
+          <li>User ID (account identifier)</li>
+          <li>Login/authentication data (e.g. Google sign-in linkage)</li>
+          <li>Your password is never stored in plain text; it is stored using a secure,
+            one-way hashing algorithm</li>
+        </ul>
+
+        <h3>Profile information</h3>
+        <ul>
+          <li>Age, height, weight, body type, marital status</li>
+          <li>City, occupation, and income information if you choose to provide it</li>
+          <li>Bio text, hobbies/interests</li>
+          <li>Profile photos</li>
+        </ul>
+
+        <h3>Location</h3>
+        <ul>
+          <li>When permitted, precise location may be collected from your device</li>
+          <li>Your exact coordinates are NEVER shown to other users</li>
+          <li>Location is used only for discovery/match ranking and distance calculation</li>
+          <li>Other users only see an approximate distance (e.g. "6 km away")</li>
+        </ul>
+
+        <h3>In-app interactions</h3>
+        <ul>
+          <li>Swipe/rating actions</li>
+          <li>Matches, blocks, and unmatches</li>
+          <li>Report/complaint records</li>
+          <li>General usage activity (activity/engagement events)</li>
+        </ul>
+
+        <h3>Messaging</h3>
+        <ul>
+          <li>Messages between you and the people you match with</li>
+          <li>Conversations with AI characters</li>
+        </ul>
+
+        <h3>AI (artificial intelligence) chats</h3>
+        <ul>
+          <li>Characters such as Alev, Burak, Lara, Mert and Vera are clearly presented as
+            <strong>artificial intelligence</strong>; the app makes clear these are not real
+            people</li>
+          <li>The content of these chats may be sent to AI service providers such as the
+            Google Gemini API to process and provide the feature</li>
+          <li>
+            The content of your conversations with AI characters may be viewed by
+            authorized app administrators in order to maintain service quality, prevent
+            abuse, and uphold security. These accesses are logged.
+          </li>
+          <li>Each such administrator access is recorded in an audit log with who accessed
+            it, which conversation, and when — this audit record does NOT contain the
+            message text itself, only the access event</li>
+        </ul>
+
+        <h3>Verification</h3>
+        <ul>
+          <li>You may optionally submit a selfie/photo for identity/account verification
+            (verification badge)</li>
+          <li>Only the authorized moderator/admin handling your verification can access this
+            image; such access is logged</li>
+        </ul>
+
+        <h3>Purchases / subscription</h3>
+        <ul>
+          <li>Your Premium and Premium+ subscription status</li>
+          <li>Information about purchases/subscriptions made through Google Play (purchase
+            time, product, status)</li>
+          <li>Your full payment card details are NOT stored on VEYA servers — payment is
+            processed directly by Google Play</li>
+        </ul>
+
+        <h3>Technical data</h3>
+        <ul>
+          <li>Device/app instance identifiers</li>
+          <li>When notifications are enabled, a push notification token may be stored so we
+            can deliver notifications to your device</li>
+          <li>Security and operational logs</li>
+          <li>Your IP address, which may be processed for security, abuse prevention, and
+            rate-limiting purposes</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>2. Why we use your data</h2>
+        <ul>
+          <li>Account creation, login, and authentication</li>
+          <li>Building your profile and running the discovery feed</li>
+          <li>Location-based matching and distance calculation</li>
+          <li>Providing swipe, match, and chat features</li>
+          <li>Providing the AI chat feature</li>
+          <li>Premium/Premium+ entitlement</li>
+          <li>Security, fraud, and abuse prevention</li>
+          <li>Moderation and report/complaint handling</li>
+          <li>Identity/account verification</li>
+          <li>Operating and troubleshooting our technical infrastructure</li>
+          <li>Complying with legal obligations</li>
+          <li>Deleting your account/data upon request</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3. Third-party service providers</h2>
+        <p>Your data may be transferred to the following service providers (processors),
+          solely for the stated purpose:</p>
+        <ul>
+          <li><strong>Google Gemini API</strong> — processing AI chat content</li>
+          <li><strong>Google Play</strong> — subscription/purchase processing</li>
+          <li>Secure storage hosted on the app's own server infrastructure — storing photos
+            and files</li>
+        </ul>
+        <p class="muted" style="margin-top:12px;">
+          When push notification, SMS, and email services are enabled, the data necessary to
+          provide those functions may be transferred to the relevant service providers.
+        </p>
+        <p class="muted" style="margin-top:12px;">
+          VEYA does NOT sell your user data to advertisers or third parties. The transfers
+          above are made solely to provide the service, in a service-provider (processor)
+          capacity.
+        </p>
+      </section>
+
+      <section class="card">
+        <span class="badge-immediate">Deleted / anonymized immediately</span>
+        <h2>4. When you delete your account</h2>
+        <ul>
+          <li>Your profile information (name, birth date, gender, preferences, fields like
+            height/weight/occupation)</li>
+          <li>Your profile photos and verification selfie</li>
+          <li>Your match/discovery preferences and filter settings</li>
+          <li>Your location data</li>
+          <li>Your notification preferences and device notification record</li>
+          <li>All your conversations and messages with AI characters</li>
+          <li>Other personal data directly tied to your account</li>
+        </ul>
+        <p class="muted" style="margin-top:14px;">
+          This data is irreversibly deleted, or anonymized so it no longer identifies you.
+        </p>
+      </section>
+
+      <section class="card">
+        <span class="badge-retained">Partially retained</span>
+        <h2>5. Messages (between users)</h2>
+        <p>
+          In conversations with people you matched with, message content may not be fully
+          deleted in order to preserve the integrity of the other person's conversation
+          history; instead, when your account is deleted, your sender identity is removed
+          from the messages and you appear to the other party as a "deleted user." We do not
+          claim that all message content is deleted.
+        </p>
+      </section>
+
+      <section class="card">
+        <span class="badge-retained">Partially retained</span>
+        <h2>6. Subscription, security, and abuse-prevention records</h2>
+        <p>
+          Purchase/subscription history, security events, moderation records (reports/blocks),
+          and abuse-prevention records may be retained for a limited period in a
+          pseudonymized form, for legal obligations (e.g. accounting regulations) and platform
+          security reasons. These records are not used to directly identify you.
+        </p>
+      </section>
+
+      <section class="card" id="delete-account-en">
+        <h2>7. Deleting your account</h2>
+        <p>You can delete your account and associated personal data at any time:</p>
+        <div class="in-app-path">Profile &gt; Delete My Account</div>
+        <p class="muted" style="margin: 14px 0;">
+          If you no longer have access to the app, you can also start a deletion request from
+          the web page below:
+        </p>
+        <a class="cta-btn" href="https://proceessyt-cpu.github.io/veya-account-deletion/">Delete my account</a>
+      </section>
+
+      <section class="card">
+        <h2>8. Your rights</h2>
+        <p>
+          Your right to delete your account and associated data is described above. Depending
+          on your location, you may also have rights under applicable data protection laws to
+          access, correct, or request deletion of your data. For such requests, you can use
+          the "Help &amp; Support" section inside the app.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>9. Age restriction</h2>
+        <p>
+          VEYA is intended only for users aged 18 and over. We do not knowingly accept
+          accounts or personal data from anyone under 18. If we become aware that someone
+          under 18 has provided us data, we will take reasonable steps to remove that account
+          and data.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>10. Security</h2>
+        <p>
+          Your data is encrypted in transit using HTTPS/TLS. We apply access controls,
+          authentication mechanisms, and separate, audit-logged access restrictions for
+          sensitive administrative actions. No system can guarantee 100% security; we
+          continue to apply reasonable technical and administrative safeguards.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>11. Contact</h2>
+        <p>
+          For questions about this Privacy Policy or your data, please use the
+          "Profile &gt; Help &amp; Support" section inside the app.
+        </p>
+      </section>
+
+    </div>
+
+    <footer>
+      <p>VEYA · Process Studio</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      var isTr = lang === 'tr';
+      document.getElementById('content-tr').hidden = !isTr;
+      document.getElementById('content-en').hidden = isTr;
+      document.getElementById('btn-tr').classList.toggle('active', isTr);
+      document.getElementById('btn-en').classList.toggle('active', !isTr);
+      document.documentElement.lang = lang;
+      document.getElementById('page-title').textContent = isTr ? 'Gizlilik Politikası' : 'Privacy Policy';
+      document.getElementById('developer-line').textContent = isTr ? 'Geliştirici: Process Studio' : 'Developer: Process Studio';
+      document.getElementById('updated-line').textContent = isTr ? 'Son güncelleme: 10 Eylül 2026' : 'Last updated: September 10, 2026';
+      try { localStorage.setItem('veya-privacy-lang', lang); } catch (e) {}
+    }
+
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('veya-privacy-lang'); } catch (e) {}
+      if (saved === 'en') {
+        setLang('en');
+      }
+    })();
+  </script>
+</body>
+</html>
