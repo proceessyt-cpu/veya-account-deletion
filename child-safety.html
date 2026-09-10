@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VEYA – Çocuk Güvenliği Standartları / Child Safety Standards</title>
+<style>
+  :root {
+    --warm-ivory: #F7F4F1;
+    --pure-surface: #FFFFFF;
+    --surface-variant: #F0EBE7;
+    --ink-primary: #1A1718;
+    --ink-muted: #7A7074;
+    --warm-border: #E8E2DE;
+    --wine-red: #9A2E4F;
+    --plum-secondary: #6F3A57;
+    --warning-amber: #E0A63A;
+    --danger-wine: #B3273F;
+    --success-green: #2E7D59;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--warm-ivory);
+    color: var(--ink-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+
+  header.hero {
+    text-align: center;
+    padding: 8px 0 20px;
+  }
+
+  header.hero .brand {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--wine-red);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    color: var(--ink-primary);
+  }
+
+  .developer-line {
+    color: var(--ink-muted);
+    font-size: 15px;
+    margin: 0 0 4px;
+  }
+
+  .updated-line {
+    color: var(--ink-muted);
+    font-size: 13px;
+    margin: 0;
+  }
+
+  /* Dil secici */
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 18px 0 4px;
+  }
+
+  .lang-btn {
+    border: 1px solid var(--warm-border);
+    background: var(--pure-surface);
+    color: var(--ink-muted);
+    border-radius: 999px;
+    padding: 7px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .lang-btn.active {
+    background: var(--wine-red);
+    border-color: var(--wine-red);
+    color: #fff;
+  }
+
+  .card {
+    background: var(--pure-surface);
+    border: 1px solid var(--warm-border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+    margin: 0 0 12px;
+    color: var(--wine-red);
+  }
+
+  .card h3 {
+    font-size: 15px;
+    margin: 18px 0 8px;
+    color: var(--plum-secondary);
+  }
+
+  .card h3:first-of-type {
+    margin-top: 4px;
+  }
+
+  .card p, .card li {
+    font-size: 15px;
+    color: var(--ink-primary);
+  }
+
+  .card ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .card li {
+    margin-bottom: 8px;
+  }
+
+  .card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .muted {
+    color: var(--ink-muted);
+    font-size: 14px;
+  }
+
+  .intro-card {
+    background: var(--surface-variant);
+    border: 1px solid var(--warm-border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--ink-primary);
+  }
+
+  .badge-zero-tolerance {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: rgba(179, 39, 63, 0.12);
+    color: var(--danger-wine);
+    border-radius: 999px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+
+  .in-app-path {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface-variant);
+    border: 1px solid var(--warm-border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--plum-secondary);
+    margin-top: 4px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  footer p {
+    color: var(--ink-muted);
+    font-size: 13px;
+    margin: 4px 0;
+  }
+
+  footer a {
+    color: var(--ink-muted);
+  }
+
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <span class="brand">VEYA</span>
+      <h1 id="page-title">VEYA Çocuk Güvenliği Standartları</h1>
+      <p class="developer-line" id="developer-line">Geliştirici: Process Studio</p>
+      <p class="updated-line" id="updated-line">Son güncelleme: 10 Eylül 2026</p>
+    </header>
+
+    <div class="lang-toggle" role="group" aria-label="Dil seçimi / Language">
+      <button type="button" class="lang-btn active" id="btn-tr" onclick="setLang('tr')">TR</button>
+      <button type="button" class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+
+    <!-- ================= TÜRKÇE ================= -->
+    <div id="content-tr">
+
+      <div class="intro-card">
+        VEYA, 18 yaş ve üzeri yetişkinler için tasarlanmış bir ilişki/eşleşme uygulamasıdır ve
+        18 yaşından küçük kişilere yönelik değildir. VEYA'yı geliştiren şirket
+        <strong>Process Studio</strong>'dur. Bu sayfa, VEYA'nın çocukların cinsel istismarı ve
+        sömürüsüne (CSAE) karşı standartlarını açıklar.
+      </div>
+
+      <section class="card">
+        <span class="badge-zero-tolerance">Sıfır tolerans</span>
+        <h2>1. Sıfır tolerans ilkesi</h2>
+        <p>
+          VEYA, çocukların cinsel istismarı ve sömürüsüne (Child Sexual Abuse and Exploitation –
+          CSAE) karşı <strong>sıfır tolerans</strong> uygular. Bu, platformumuzun hiçbir
+          bölümünde, hiçbir koşulda istisna tanınmayan, mutlak bir kuraldır.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. Kesinlikle yasaklanan içerik</h2>
+        <p>
+          Çocukların cinsel istismarı nitelikli materyalin (Child Sexual Abuse Material –
+          CSAM):
+        </p>
+        <ul>
+          <li>Oluşturulması</li>
+          <li>Yüklenmesi</li>
+          <li>Paylaşılması</li>
+          <li>Talep edilmesi</li>
+          <li>Dağıtılması</li>
+        </ul>
+        <p>
+          VEYA üzerinde <strong>kesinlikle yasaktır</strong>. Yapay zekâ araçlarıyla üretilmiş
+          olanlar da dâhil olmak üzere, bu tür herhangi bir materyalin herhangi bir biçimi
+          platformumuzda hiçbir şekilde barındırılmaz.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>3. Yasaklanan davranışlar</h2>
+        <p>Aşağıdaki davranışların tümü VEYA'da kesinlikle yasaktır:</p>
+        <ul>
+          <li>Çocuklara yönelik grooming (kandırma/tuzağa düşürme) davranışı</li>
+          <li>Çocuklarla cinsel amaçlı iletişim kurma</li>
+          <li>Çocukları cinsel içerik üretmeye veya paylaşmaya yönlendirme ya da zorlama</li>
+          <li>Çocuklara yönelik şantaj (sextortion dâhil)</li>
+          <li>Çocukların cinsel sömürüsü niteliğindeki her türlü diğer davranış</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4. Tespit hâlinde alınan önlemler</h2>
+        <p>
+          Bu Standartları ihlal eden içerik veya davranış tespit edildiğinde VEYA aşağıdaki
+          önlemlerden bir veya birkaçını derhâl uygulayabilir:
+        </p>
+        <ul>
+          <li>İçeriğin platformdan kaldırılması</li>
+          <li>İlgili hesabın askıya alınması</li>
+          <li>İlgili hesabın kalıcı olarak yasaklanması (ban)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>5. Yasal uyum ve yetkili makamlara bildirim</h2>
+        <p>
+          VEYA, geçerli çocuk güvenliği yasalarına ve düzenlemelerine uyar. Gerekli görüldüğünde,
+          VEYA çocukların cinsel istismarı ve sömürüsüyle ilgili tespitleri yetkili kolluk
+          kuvvetlerine ve/veya ilgili yetkili makamlara bildirir.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>6. Raporlama — kullanıcıların rolü</h2>
+        <p>
+          Kullanıcılarımız, uygulama içindeki <strong>"Raporla"</strong> özelliğini kullanarak,
+          şüpheli kullanıcıları, hesapları veya bu Standartları ihlal ettiğini düşündükleri
+          herhangi bir uygunsuz davranışı doğrudan bize bildirebilir. Her rapor incelenir.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>7. Çocuk güvenliği iletişim</h2>
+        <p>
+          Çocuk güvenliğiyle ilgili bir endişenizi bildirmek veya bu Standartlar hakkında soru
+          sormak için bizimle doğrudan iletişime geçebilirsiniz:
+          <a href="mailto:aealpler@gmail.com">aealpler@gmail.com</a>
+        </p>
+        <p class="muted" style="margin-top:8px;">
+          Ayrıca uygulama içindeki <strong>"Raporla"</strong> özelliğini de kullanabilirsiniz.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>8. Yaş sınırı</h2>
+        <p>
+          VEYA yalnızca 18 yaş ve üzeri kullanıcılar içindir. 18 yaşından küçük kişilerden
+          bilerek hesap veya kişisel veri kabul etmeyi amaçlamıyoruz. 18 yaşından küçük bir
+          kişinin uygulamayı kullandığını fark edersek, ilgili hesabı kaldırmak için makul
+          adımları atarız.
+        </p>
+      </section>
+
+      <div class="in-app-path" id="policy-date-tr">Politika tarihi: 10 Eylül 2026</div>
+
+    </div>
+
+    <!-- ================= ENGLISH ================= -->
+    <div id="content-en" hidden>
+
+      <div class="intro-card">
+        VEYA is a relationship/matching app designed for adults aged 18 and over and is not
+        directed at anyone under 18. VEYA is developed by <strong>Process Studio</strong>. This
+        page describes VEYA's standards against child sexual abuse and exploitation (CSAE).
+      </div>
+
+      <section class="card">
+        <span class="badge-zero-tolerance">Zero tolerance</span>
+        <h2>1. Zero-tolerance policy</h2>
+        <p>
+          VEYA applies a <strong>zero-tolerance policy</strong> towards child sexual abuse and
+          exploitation (CSAE). This is an absolute rule with no exceptions, anywhere on our
+          platform, under any circumstances.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. Strictly prohibited content</h2>
+        <p>
+          The following is <strong>strictly prohibited</strong> on VEYA:
+        </p>
+        <ul>
+          <li>Creating</li>
+          <li>Uploading</li>
+          <li>Sharing</li>
+          <li>Soliciting</li>
+          <li>Distributing</li>
+        </ul>
+        <p>
+          child sexual abuse material (CSAM), in any form — including AI-generated material.
+          No form of such material is hosted on our platform under any circumstances.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>3. Prohibited conduct</h2>
+        <p>All of the following conduct is strictly prohibited on VEYA:</p>
+        <ul>
+          <li>Grooming behavior directed at children</li>
+          <li>Sexually-motivated communication with children</li>
+          <li>Coercing or encouraging children to produce or share sexual content</li>
+          <li>Extortion targeting children (including sextortion)</li>
+          <li>Any other conduct constituting child sexual exploitation</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4. Enforcement actions</h2>
+        <p>
+          When content or conduct violating these Standards is detected, VEYA may immediately
+          take one or more of the following actions:
+        </p>
+        <ul>
+          <li>Removal of the content from the platform</li>
+          <li>Suspension of the associated account</li>
+          <li>Permanent ban of the associated account</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>5. Legal compliance and reporting to authorities</h2>
+        <p>
+          VEYA complies with applicable child safety laws and regulations. Where required,
+          VEYA reports findings related to child sexual abuse and exploitation to law
+          enforcement and/or the relevant competent authorities.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>6. Reporting — the role of our users</h2>
+        <p>
+          Our users can use the in-app <strong>"Report"</strong> feature to directly notify us
+          of suspicious users, accounts, or any inappropriate behavior they believe violates
+          these Standards. Every report is reviewed.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>7. Child safety contact</h2>
+        <p>
+          To report a child safety concern or ask a question about these Standards, you can
+          contact us directly at
+          <a href="mailto:aealpler@gmail.com">aealpler@gmail.com</a>.
+        </p>
+        <p class="muted" style="margin-top:8px;">
+          You can also use the in-app <strong>"Report"</strong> feature.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>8. Age restriction</h2>
+        <p>
+          VEYA is intended only for users aged 18 and over. We do not knowingly accept accounts
+          or personal data from anyone under 18. If we become aware that someone under 18 is
+          using the app, we will take reasonable steps to remove that account.
+        </p>
+      </section>
+
+      <div class="in-app-path" id="policy-date-en">Policy date: September 10, 2026</div>
+
+    </div>
+
+    <footer>
+      <p>VEYA · Process Studio</p>
+      <p><a href="./privacy.html">Privacy Policy</a> · <a href="./index.html">Account Deletion</a></p>
+    </footer>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      var isTr = lang === 'tr';
+      document.getElementById('content-tr').hidden = !isTr;
+      document.getElementById('content-en').hidden = isTr;
+      document.getElementById('btn-tr').classList.toggle('active', isTr);
+      document.getElementById('btn-en').classList.toggle('active', !isTr);
+      document.documentElement.lang = lang;
+      document.getElementById('page-title').textContent = isTr ? 'VEYA Çocuk Güvenliği Standartları' : 'VEYA Child Safety Standards';
+      document.getElementById('developer-line').textContent = isTr ? 'Geliştirici: Process Studio' : 'Developer: Process Studio';
+      document.getElementById('updated-line').textContent = isTr ? 'Son güncelleme: 10 Eylül 2026' : 'Last updated: September 10, 2026';
+      try { localStorage.setItem('veya-child-safety-lang', lang); } catch (e) {}
+    }
+
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('veya-child-safety-lang'); } catch (e) {}
+      if (saved === 'en') {
+        setLang('en');
+      }
+    })();
+  </script>
+</body>
+</html>
